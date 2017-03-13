@@ -1,0 +1,27 @@
+@font-face {
+    font-family: "WorkSans";
+    src: url('worksans/WorkSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: "WorkSans";
+    src: url('worksans/WorkSans-SemiBold.ttf');
+    font-weight: SemiBold;
+}
+
+body {
+	text-align: center;
+	font-family: "Lato";
+}
+
+article {
+	text-align: left;
+}
+
+.page-header {
+	font-family: "Work Sans";
+}
+
+.hidden {
+	display: hidden;
+}
