@@ -36,13 +36,22 @@
                     </article>
                     <hr>
                     <div id="table">
-                        <form>
-                            <input type="checkbox" name="men" value="men" id="men" checked>
-                            <label for="men">Men</label>
+                        <input type="text" name="search" placeholder="Search..." id="searchText">
+                        <br><br>
+                        <span>
                             <input type="checkbox" name="women" value="women" id="women" checked>
                             <label for="women">Women</label>
-                        </form>
+                        </span>
+                        <span>
+                            <input type="checkbox" name="men" value="men" id="men" checked>
+                            <label for="men">Men</label>
+                        </span>
+                        <hr>
+                        <div id="placeholderUp">
+                            <button id="up" hidden>Show More</button>
+                        </div>
                         <table></table>
+                        <button id="down">Show More</button>
                     </div>
                     <hr>
                     <footer>

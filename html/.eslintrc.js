@@ -4,6 +4,7 @@ module.exports = {
         "import"
     ], 
     "env": {
-    	"jquery": true
+    	"jquery": true,
+    	"browser": true,
     }
 };
