@@ -63,7 +63,7 @@ function handleSearch(event) {
   event.preventDefault();
   const query = $('#searchText').val();
   const index = search(query);
-  if (index > 0) {
+  if (index >= 0) {
     from = Math.max(0, index);
     to = Math.min(data.length - 1, from + interval);
     buildTable();
@@ -81,6 +81,16 @@ function handleSearch(event) {
     $('#up').css('visibility', 'hidden');
     $('#down').css('visibility', 'hidden');
   }
+
+  if (query !== '') {
+    $('tr td:nth-child(3)').each((i, v) => {
+      const tdValue = $(v).html();
+      if (tdValue.toLowerCase().startsWith(query.toLowerCase())) {
+        $(v).html(`<b>${tdValue}</b>`);
+      }
+    });
+  }
+
   return false;
 }
 
