@@ -63,7 +63,7 @@ function handleSearch(event) {
   event.preventDefault();
   const query = $('#searchText').val();
   const index = search(query);
-  if (index >= 0) {
+  if (index >= 0 && (query !== '')) {
     from = Math.max(0, index);
     to = Math.min(data.length - 1, from + interval);
     buildTable();
@@ -86,7 +86,7 @@ function handleSearch(event) {
     $('tr td:nth-child(3)').each((i, v) => {
       const tdValue = $(v).html();
       if (tdValue.toLowerCase().startsWith(query.toLowerCase())) {
-        $(v).html(`<b>${tdValue}</b>`);
+        $(v).parent().addClass('fat');
       }
     });
   }
