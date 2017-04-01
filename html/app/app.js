@@ -35,8 +35,8 @@ function buildTable() {
     rows.forEach(x => $('#table table').append(x));
   } else {
     $('#table table').html('Nothing to show!');
-    $('#up').hide();
-    $('#down').hide();
+    $('#up').css('visibility', 'hidden');
+    $('#down').css('visibility', 'hidden');
   }
 }
 
@@ -68,18 +68,18 @@ function handleSearch(event) {
     to = Math.min(data.length - 1, from + interval);
     buildTable();
     if (from > 0) {
-      $('#up').show();
+      $('#up').css('visibility', 'visible');
     }
   } else if (query === '') {
     from = 0;
     to = interval;
     buildTable();
-    $('#up').hide();
-    $('#down').show();
+    $('#up').css('visibility', 'hidden');
+    $('#down').css('visibility', 'visible');
   } else {
     $('#table table').html('Nothing found!');
-    $('#up').hide();
-    $('#down').hide();
+    $('#up').css('visibility', 'hidden');
+    $('#down').css('visibility', 'hidden');
   }
   return false;
 }
@@ -94,7 +94,7 @@ function showMoreUp() {
 
   from = fromNew;
   if (from === 0) {
-    $('#up').hide();
+    $('#up').css('visibility', 'hidden');
   }
 }
 
@@ -104,7 +104,7 @@ function showMoreDown() {
 
   to = toNew;
   if (to === data.length - 1) {
-    $('#down').hide();
+    $('#down').css('visibility', 'hidden');
   }
 }
 
