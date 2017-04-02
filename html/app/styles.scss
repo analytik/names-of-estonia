@@ -20,6 +20,9 @@
   font-weight: Bold;
 }
 
+$primary-color: #c5e7ed;
+$secondary-color: #000;
+
 body {
   font-family: 'Lato';
   text-align: center;
@@ -32,10 +35,6 @@ article {
 .page-header {
   font-family: 'Work Sans';
 }
-
-// td + td {
-//  padding: 0 1em;
-// }
 
 td:nth-child(1) {
   text-align: left;
@@ -84,8 +83,8 @@ input[type='text'] {
   width: 100%;
 
   &:focus {
-    border: 1px solid #c5e7ed;
-    box-shadow:0 0 10px #c5e7ed;
+    border: 1px solid $primary-color;
+    box-shadow:0 0 10px $primary-color;
     outline: none;
   }
 }
@@ -94,7 +93,7 @@ input[type='checkbox'] {
   display: none;
 
   & + label:before {
-    border: 1px solid black;
+    border: 1px solid $secondary-color;
     content: '\00a0';
     display: inline-block;
     font: 16px/1em sans-serif;
@@ -107,8 +106,8 @@ input[type='checkbox'] {
 }
 
 input[type='checkbox']:checked + label:before {
-  background: #c5e7ed;
-  color: black;
+  background: $primary-color;
+  color: $secondary-color;
   content: '\2713';
   text-align: center;
 }
@@ -132,4 +131,15 @@ span + span {
 
 .fat {
   font-weight: bold;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+
+  &:active,
+  &:hover,
+  &:visited {
+    color: inherit;
+  }
 }
