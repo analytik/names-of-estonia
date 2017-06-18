@@ -1,4 +1,5 @@
-// I thought I could just do it without React, in the end, I should have done it with React.
+// I thought I could just do it without React.
+// In the end, I realized I should have done it with React.
 
 let data = []; // [0] name, [1] women, [2] men, [3] sum, [4] rank
 const interval = 100;
