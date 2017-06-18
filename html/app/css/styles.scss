@@ -1,23 +1,13 @@
 @font-face {
-  font-family: 'WorkSans';
-  src: url('fonts/worksans/WorkSans-Regular.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'WorkSans';
-  src: url('fonts/worksans/WorkSans-SemiBold.ttf') format('ttf');
-  font-weight: SemiBold;
+  font-family: 'Work Sans';
+  src: url('../fonts/worksans/WorkSans-Regular.woff2') format('woff2'),
+  url('../fonts/worksans/WorkSans-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/lato/Lato-Regular.ttf') format('ttf');
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url('fonts/lato/Lato-Bold.ttf') format('ttf');
-  font-weight: Bold;
+  src: url('../fonts/lato/Lato-Regular.woff2') format('woff2'),
+  url('../fonts/lato/Lato-Regular.woff') format('woff');
 }
 
 $primary-color: #c5e7ed;
