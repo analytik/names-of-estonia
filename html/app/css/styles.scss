@@ -1,22 +1,22 @@
 @font-face {
   font-family: 'WorkSans';
-  src: url('fonts/worksans/WorkSans-Regular.ttf');
+  src: url('fonts/worksans/WorkSans-Regular.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'WorkSans';
-  src: url('fonts/worksans/WorkSans-SemiBold.ttf');
+  src: url('fonts/worksans/WorkSans-SemiBold.ttf') format('ttf');
   font-weight: SemiBold;
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/lato/Lato-Regular.ttf');
+  src: url('fonts/lato/Lato-Regular.ttf') format('ttf');
 }
 
 @font-face {
   font-family: 'Lato';
-  src: url('fonts/lato/Lato-Bold.ttf');
+  src: url('fonts/lato/Lato-Bold.ttf') format('ttf');
   font-weight: Bold;
 }
 
@@ -24,7 +24,7 @@ $primary-color: #c5e7ed;
 $secondary-color: #000;
 
 body {
-  font-family: 'Lato';
+  font-family: 'Lato', sans-serif;
   text-align: center;
 }
 
@@ -33,7 +33,7 @@ article {
 }
 
 .page-header {
-  font-family: 'Work Sans';
+  font-family: 'Work Sans', serif;
 }
 
 td:nth-child(1) {
@@ -84,7 +84,7 @@ input[type='text'] {
 
   &:focus {
     border: 1px solid $primary-color;
-    box-shadow:0 0 10px $primary-color;
+    box-shadow: 0 0 10px $primary-color;
     outline: none;
   }
 }

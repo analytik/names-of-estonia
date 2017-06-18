@@ -1,3 +1,5 @@
+// I thought I could just do it without React, in the end, I should have done it with React.
+
 let data = []; // [0] name, [1] women, [2] men, [3] sum, [4] rank
 const interval = 100;
 let from = 0;
@@ -59,8 +61,7 @@ function search(query) {
   return -1;
 }
 
-function handleSearch(event) {
-  event.preventDefault();
+function handleSearch() {
   const query = $('#searchText').val();
   const index = search(query);
   if (index >= 0 && (query !== '')) {
@@ -90,7 +91,11 @@ function handleSearch(event) {
       }
     });
   }
+}
 
+function handleSearchEvent(event) {
+  event.preventDefault();
+  handleSearch();
   return false;
 }
 
@@ -118,11 +123,15 @@ function showMoreDown() {
   }
 }
 
-$().ready(() => {
+function handleGenderSelectionChange() {
+  handleSearch();
+}
+
+export default function init() {
   $.getJSON('./data.json', setUpData);
-  $('#women').change(buildTable);
-  $('#men').change(buildTable);
-  $('#searchText').on('input', handleSearch);
+  $('#women').change(handleGenderSelectionChange);
+  $('#men').change(handleGenderSelectionChange);
+  $('#searchText').on('input', handleSearchEvent);
   $('#up').click(showMoreUp);
   $('#down').click(showMoreDown);
-});
+}
