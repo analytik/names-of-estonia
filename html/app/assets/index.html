@@ -52,12 +52,28 @@
                     <hr>
                     <footer>
                         by <a href="https://johannesfilter.com">Johannes Filter</a>, 19.06.2017<br><br>
-                        Source: <a href="http://www.stat.ee/public/apps/nimed/TOP">Statistics Estonia</a><br><br>
+                        Data: <a href="http://www.stat.ee/public/apps/nimed/TOP">Statistics Estonia</a><br><br>
+                        Source Code: <a href="https://github.com/jfilter/names-of-estonia">On Github</a><br><br>
                     </footer>
                 </div>
             </div>
         </div><!-- /.container -->
         <script src="js/vendor.js" defer></script>
         <script src="js/app.js" defer></script>
+        <!-- Piwik -->
+        <script type="text/javascript">
+          var _paq = _paq || [];
+          /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+          _paq.push(['trackPageView']);
+          _paq.push(['enableLinkTracking']);
+          (function() {
+            var u="//vis.one/piwik/";
+            _paq.push(['setTrackerUrl', u+'piwik.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+          })();
+        </script>
+        <!-- End Piwik Code -->
     </body>
 </html>

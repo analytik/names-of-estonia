@@ -1,16 +1,15 @@
 {
-  "name": "brunch-app",
-  "description": "Brunch.io application",
+  "name": "names-of-estonian",
+  "description": "Names of Estonia",
   "private": true,
-  "author": "Brunch",
-  "version": "0.0.1",
+  "author": "Johannes Filter",
+  "version": "0.1.0",
   "repository": "",
   "scripts": {
     "start": "LOGGY_STACKS=true brunch watch --server",
     "build": "brunch build --production"
   },
   "dependencies": {
-    "d3": "^4.6.0"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2.7.1",
